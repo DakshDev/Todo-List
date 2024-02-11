@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+::selection{
+    background: none;
+}
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+    background: #777;
+    border-radius: 10px;
+}
+#main{
+    padding: 10px;
+    border-radius: 10px;
+    background: #333;
+}
+#main h1{
+    text-align: center;
+    color: #5ab981;
+    text-transform: uppercase;
+}
+#main #input{
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 1px solid #444;
+    outline: none;
+    height: 40px;
+    width: 400px;
+    margin: 10px 0px;
+    color: lightgray;
+    border-radius: 5px;
+}
+#main #todoBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#main #todoBox #addBtn{
+    padding: 5px 10px;
+    background: #222;
+    outline: none;
+    height: 40px;
+    width: 400px;
+    margin-bottom: 10px;
+    border:1px solid transparent;
+    color: lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#main #todoBox #addBtn:active{
+    background: #333;
+    border: 1px solid #444;
+}
+#main #todoBox .todo{
+    background: #333;
+    border-radius: 5px;
+    display: grid;
+    align-items: flex-start;
+    align-content: flex-start;
+    grid-gap: 5px;
+    width: 400px;
+    margin: 5px 0px;
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 50vh;
+}
+#main #todoBox .todo > div{
+    background-color: #444;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0px 5px;
+    padding: 4px;
+}
+#main #todoBox .todo .cut{
+    background: #222;
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(194, 64, 64);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+#main #todoBox .todo .cut:active{
+    background: #333;
+}
+#main #todoBox .todo .todoName{
+    width: 350px;
+    word-wrap: break-word;
+    font-size: 15px;
+    text-transform: lowercase;
+    padding: 2px;
+}
+#main #todoBox .todo .todoName::selection{
+    background: #777;
+}
